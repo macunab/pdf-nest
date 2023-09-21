@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PdfGeneratorModule } from './pdf-generator/pdf-generator.module';
 
 @Module({
-  imports: [],
+  imports: [PdfGeneratorModule],
   controllers: [AppController],
   providers: [AppService],
 })
